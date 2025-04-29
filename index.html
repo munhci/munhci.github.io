@@ -37,7 +37,7 @@
     <div class="container">
         <div class="main-text">
             <div id="about" class="text-content">
-                <h1>Human-Computer Interaction at MUN</h1>
+                <h2>Human-Computer Interaction at MUN</h2>
                 <p>Welcome to the <b>Human-Computer Interaction (HCI) Lab</b> in the Department of Computer Science at <a href="https://www.mun.ca/">Memorial University</a>, led by <a href="https://jayhenderson.ca/">Jay Henderson</a>. The lab mainly focuses on understanding human performance and experience with some form of input or interaction with a computer. Lately, we have worked on interactions with existing and new technologies, such as extended reality (VR, AR, MR) and generative AI.</p>
                 <p class="center">Our work is supported by:</p>
                 <div class="section">
@@ -209,9 +209,25 @@
                 img.style.top = '0px';
             }
         }
-
+        
         window.addEventListener('load', adjustImagePosition);
         window.addEventListener('resize', adjustImagePosition);
+        
+        function enforceSkyHeight() {
+          const header = document.querySelector('.homepage-image img');
+          const desiredRatio = 1 / 3.5;
+
+          if (header) {
+            const width = header.offsetWidth;
+            const minHeight = width * desiredRatio;
+            header.style.minHeight = `${minHeight}px`;
+          }
+        }
+
+        enforceSkyHeight();
+        window.addEventListener('resize', enforceSkyHeight);
+
+
     </script>
 </body>
 </html>

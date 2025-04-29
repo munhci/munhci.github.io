@@ -96,7 +96,7 @@ nav {
 
 .homepage-image img {
   width: 100%;
-  max-height: 500px;
+  max-height: 450px;
   display: block;
   object-fit: cover;
   object-position: bottom;
@@ -132,11 +132,6 @@ nav {
 
 .text-content a:hover {
   color: #aaaaaa;
-}
-
-.text-content h1 {
-  font-size: 28px;
-  text-align: center;
 }
 
 .text-content h2 {
@@ -247,7 +242,7 @@ nav {
 
 @media (max-width: 768px) {
 
-   .logo img {
+  .logo img {
     padding-left: 20px;
   }
 
